@@ -11,16 +11,6 @@ def draw_cube(screen_, x, y):
     p2 = [(250 + x, 250 + y), (450 + x, 250 + y), (450 + x, 450 + y), (250 + x, 450 + y)]
     p3 = [(200 - x, 200 - y), (500 - x, 200 - y), (450 + x, 250 + y), (250 + x, 250 + y)]
     p4 = [(250 + x, 450 + y), (450 + x, 450 + y), (500 - x, 500 - y), (200 - x, 500 - y)]
-    if (p1[0][0]>170) and (p1[0][0]<530):
-        p1 = [(200 - x, 200 - y), (500 - x, 200 - y), (500 - x, 500 - y), (200 - x, 500 - y)]
-        p3 = [(200 - x, 200 - y), (500 - x, 200 - y), (450 + x, 250 + y), (250 + x, 250 + y)]
-        p4 = [(250 + x, 450 + y), (450 + x, 450 + y), (500 - x, 500 - y), (200 - x, 500 - y)]
-        print(p1[0][0])
-    else:
-        p1 = [(140 + x, 200 - y), (500 - x, 200 - y), (500 - x, 500 - y), (140 + x, 500 - y)]
-        p3 = [(140 + x, 200 - y), (500 - x, 200 - y), (450 + x, 250 + y), (250 + x, 250 + y)]
-        p4 = [(250 + x, 450 + y), (450 + x, 450 + y), (500 - x, 500 - y), (140 + x, 500 - y)]
-        print(p1[0][0])
     pygame.draw.polygon(screen, WHITE, p1, 1)
     pygame.draw.polygon(screen, WHITE, p2, 1)
     pygame.draw.polygon(screen, WHITE, p3, 1)
@@ -78,7 +68,7 @@ while not DONE:
 
     """fill the screen with white"""
     screen.fill(BLACK)
-    
+
     """flip display"""
     draw_cube(screen, x_coord, y_coord)
     pygame.display.flip()
