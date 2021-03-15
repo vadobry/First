@@ -20,7 +20,10 @@
 # There isn't an int excluded from the input -> None
 # Algorithm
 # # The problem states to use a minimal amount of memory. We'll use a bit vector to keep track of the inputs.
-# # Say we are given 4 billion integers, which is 2^32 integers. The number of non-negative integers would be 2^31. With a bit vector, we'll need 4 billion bits to map each integer to a bit. Say we had only 1 GB of memory or 2^32 bytes. This would leave us with 8 billion bits.
+# # Say we are given 4 billion integers, which is 2^32 integers.
+# The number of non-negative integers would be 2^31.
+# With a bit vector, we'll need 4 billion bits to map each integer to a bit.
+# Say we had only 1 GB of memory or 2^32 bytes. This would leave us with 8 billion bits.
 # # To simplify this exercise, we'll work with an input of up to 32 ints that we'll map to a bit vector of 32 bits.
 # # input = [0, 1, 2, 3, 4...28, 29, 31]
 # #
